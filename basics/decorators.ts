@@ -5,12 +5,17 @@ class Boat {
     return `This boats color is ${this.color}`;
   }
 
-  @logError('Oops, boat was sunk')
-  pilot(): void {
-    throw new Error();
-    console.log("swish");
+  @logError("Oops, boat was sunk")
+  pilot(@parameterDecorator speed: string): void {
+    if (speed === "fast") {
+      console.log("swish");
+    } else {
+      console.log("nothing");
+    }
   }
 }
+
+function parameterDecorator(target: any, key: string, index: number) {}
 
 function logError(errorMessage: string) {
   return function (target: any, key: string, desc: PropertyDescriptor): void {
