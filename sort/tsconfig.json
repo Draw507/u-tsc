@@ -7,5 +7,6 @@
     "sourceMap": true,
     "outDir": "./build",
     "rootDir": "./src",
+    "target": "ES2018"
   },
 }
