@@ -50,7 +50,7 @@ printAnything<string>(["1", "2"]);
 
 // generic constraint
 
-class Car implements Printable {
+class Cars implements Printable {
   print() {
     console.log("I am a car");
   }
@@ -72,4 +72,4 @@ function printHousesOrCars<T extends Printable>(array: T[]): void {
   }
 }
 
-printHousesOrCars([new House(), new Car()]);
+printHousesOrCars([new House(), new Cars()]);

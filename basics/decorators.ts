@@ -1,3 +1,4 @@
+@classDecorator
 class Boat {
   color: string = "red";
 
@@ -15,6 +16,8 @@ class Boat {
   }
 }
 
+function classDecorator(constructor: typeof Boat) {}
+
 function parameterDecorator(target: any, key: string, index: number) {}
 
 function logError(errorMessage: string) {
@@ -30,4 +33,4 @@ function logError(errorMessage: string) {
   };
 }
 
-new Boat().pilot();
+new Boat().pilot('');
